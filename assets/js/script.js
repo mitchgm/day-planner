@@ -1,16 +1,19 @@
-var datEl = document.getElementById("currentDay");
+var datEl = $("#currentDay");
 
 datEl.textContent= moment().format('MMMM Do YYYY');
 
  var currentTime = moment().hour();
 
 
-var timeBlock = document.querySelectorAll(".hour");
+var timeBlock = $(".hour");
 
-for (var i = 0; timeBlock.length > i; i++) {
+
+
+function timeColor () {
+    for (var i = 0; timeBlock.length > i; i++) {
     var currentId = timeBlock[i].getAttribute("id");
     if (currentId < currentTime) {
-        console.log(timeBlock[i].nextElementSibling);
+        //console.log(timeBlock[i].nextElementSibling);
         timeBlock[i].nextElementSibling.classList.add("past");
     }
     else if (currentId == currentTime) {
@@ -21,9 +24,34 @@ for (var i = 0; timeBlock.length > i; i++) {
     }
     
 }
+};
+timeColor();
+
+var saveBtnEl = $(".saveBtn");
+
+saveBtnEl.on("click", function(event) {
+    event.preventDefault();
+    var text = $(this).siblings(".textArea").val().replace(parentEl);
+    var parentEl = $(this).parent().attr("id");
+    localStorage.setItem(parentEl, JSON.stringify(text))
+    
+})
+$("#9 textarea").val(JSON.parse(localStorage.getItem("9")))
+$("#10 textarea").val(JSON.parse(localStorage.getItem("10")))
+$("#11 textarea").val(JSON.parse(localStorage.getItem("11")))
+$("#12 textarea").val(JSON.parse(localStorage.getItem("12")))
+$("#13 textarea").val(JSON.parse(localStorage.getItem("13")))
+$("#14 textarea").val(JSON.parse(localStorage.getItem("14")))
+$("#15 textarea").val(JSON.parse(localStorage.getItem("15")))
+$("#16 textarea").val(JSON.parse(localStorage.getItem("16")))
+$("#17 textarea").val(JSON.parse(localStorage.getItem("17")))
 
 
+console.log(saveBtnEl);
 
 
+function savedPlans () {
+    
 
+};
 
