@@ -1,11 +1,9 @@
 # day-planner
 
-# JavaScript-Code-Quiz
-
 
 # Project Description 
 
-In the 4th challenge of the bootcamp, I set out to make myself a coding quiz. The quiz should have a timer, as well as the functionality to save high scores.  
+In the 5th challenge of the bootcamp, I set out to make myself a day planner. The planner should have blocks to add works plans from 9-5 and save them. The times should be color coded depending on the time of day.   
 
 # Installation 
 
@@ -56,6 +54,7 @@ v1.0.0
 - created a repo on github
 - fixed image pathing
 - created javascript files
+- implemented jquery
 
 
 

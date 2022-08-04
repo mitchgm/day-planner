@@ -22,7 +22,7 @@ function timeColor () {
     else {
         timeBlock[i].nextElementSibling.classList.add("future");
     }
-    
+    // this function color codes our text areas based on the time of day
 }
 };
 timeColor();
@@ -34,6 +34,7 @@ saveBtnEl.on("click", function(event) {
     var text = $(this).siblings(".textArea").val().replace(parentEl);
     var parentEl = $(this).parent().attr("id");
     localStorage.setItem(parentEl, JSON.stringify(text))
+    // this saves our plans in local storage
     
 })
 $("#9 textarea").val(JSON.parse(localStorage.getItem("9")))
@@ -45,7 +46,7 @@ $("#14 textarea").val(JSON.parse(localStorage.getItem("14")))
 $("#15 textarea").val(JSON.parse(localStorage.getItem("15")))
 $("#16 textarea").val(JSON.parse(localStorage.getItem("16")))
 $("#17 textarea").val(JSON.parse(localStorage.getItem("17")))
-
+// this pulls our data from local storage so it displays even afetr the page is refreshed
 
 console.log(saveBtnEl);
 
