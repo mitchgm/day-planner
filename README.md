@@ -13,7 +13,7 @@ Link to deployed website: https://github.com/mitchgm/JavaScript-Code-Quiz
 
 # Usage
 
-![screenshot of home page](assets/images/home.jpg) 
+![screenshot of home page](assets/images/home2.jpg) 
 
 ![screenshot of the body](assets/images/body.jpg)
 
