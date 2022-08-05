@@ -1,6 +1,10 @@
 var datEl = $("#currentDay");
+var displayInfo = moment().format('dddd') + ", " + moment().format("MMMM Do");
+
+var displayDay = document.getElementById("currentDay").innerHTML = displayInfo;
 
 datEl.textContent= moment().format('MMMM Do YYYY');
+console.log(datEl);
 
  var currentTime = moment().hour();
 
